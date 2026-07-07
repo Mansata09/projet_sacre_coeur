@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-07-02T16:17:27.557910+00:00 by Eclipse SUMO sumo 1.27.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm.net.xml.gz"/>
+        <route-files value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\trips.trips.xml"/>
+        <additional-files value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm_stops.add.xml"/>
+    </input>
+
+    <output>
+        <vehroute-output value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\vehroutes.xml"/>
+        <stop-output value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\stopinfos.xml"/>
+    </output>
+
+    <time>
+        <begin value="0.0"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+        <time-to-teleport.disconnected value="0"/>
+        <default.departspeed value="0"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-interval value="0"/>
+    </routing>
+
+    <report>
+        <aggregate-warnings value="5"/>
+        <error-log value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\trips.trips.xml.errorlog"/>
+        <no-step-log value="true"/>
+    </report>
+
+</sumoConfiguration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="0_bus_4:0" type="pt_bus" depart="383.00" departLane="0" arrival="809.00">
+        <route edges="393063209#0 393063209#1 393063209#2 393063209#3 393063209#4 393063209#5 490366732#0 490366732#1 490366732#2 395950811#0 395950811#1 395950811#2 52141980 430812002#2 430812002#3 -431212724#2 -431212724#1 -431212724#0 -330255479#7 -330255479#5 -330255479#4 -330255479#3 -330255479#2 -330255479#1 -330255479#0"/>
+        <stop busStop="4754647819" duration="30.00"/>
+        <stop busStop="4754647820" duration="30.00"/>
+        <stop busStop="4363241806" duration="30.00"/>
+        <stop busStop="-4363241830" duration="30.00"/>
+    </vehicle>
+
+</routes>

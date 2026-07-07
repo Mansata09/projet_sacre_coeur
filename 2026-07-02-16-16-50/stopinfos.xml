@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-07-02T16:17:51.454353+00:00 by Eclipse SUMO GUI 1.27.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm.net.xml.gz"/>
+        <route-files value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm.passenger.trips.xml,C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm_pt.rou.xml"/>
+        <additional-files value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm.poly.xml.gz,C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm_stops.add.xml,C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\output.add.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\tripinfos.xml"/>
+        <stop-output value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\stopinfos.xml"/>
+        <statistic-output value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\stats.xml"/>
+    </output>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+        <tls.actuated.jam-threshold value="30"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-steps value="18"/>
+        <device.rerouting.adaptation-interval value="10"/>
+    </routing>
+
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <gui_only>
+        <gui-settings-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm.view.xml"/>
+    </gui_only>
+
+</sumoConfiguration>
+-->
+
+<stops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/stopinfo_file.xsd">
+</stops>

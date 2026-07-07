@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-07-02 16:17:25.588407 by Eclipse SUMO $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_27_0+0000-e238ea04b71
+<configuration>
+    <net-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm.net.xml.gz"/>
+    <ptlines-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm_ptlines.xml"/>
+    <ptstops-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm_stops.add.xml"/>
+    <output-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm_pt.rou.xml"/>
+    <stopinfos-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\stopinfos.xml"/>
+    <routes-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\vehroutes.xml"/>
+    <trips-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\trips.trips.xml"/>
+    <min-stops value="0"/>
+    <extend-to-fringe value="True"/>
+    <random-begin value="True"/>
+    <seed value="42"/>
+    <ignore-errors value="True"/>
+    <types value="bus,tram,subway,light_rail,train,trolleybus,monorail,minibus,share_taxi,ferry,aerialway"/>
+    <vtype-prefix value="pt_"/>
+    <verbose value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_tram" vClass="tram" speedFactor="1.0"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="subway"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail_urban"/>
+    <vType id="pt_trolleybus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_minibus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_share_taxi" vClass="taxi" speedFactor="0.95"/>
+    <vType id="pt_aerialway" vClass="cable_car" length="2.5" width="2" personCapacity="4"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <trip id="0_bus_4:0" type="pt_bus" depart="383.0" departLane="best" from="393063209#0" to="-330255479#0">
+        <stop busStop="4754647819" duration="30"/>  <!-- None -->
+        <stop busStop="4754647820" duration="30"/>  <!-- None -->
+        <stop busStop="4363241806" duration="30"/>  <!-- None -->
+        <stop busStop="-4363241830" duration="30"/>  <!-- None -->
+    </trip>
+</routes>

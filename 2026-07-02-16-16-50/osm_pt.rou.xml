@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-07-02 16:17:28.458317 by Eclipse SUMO osmWebWizard.py v1_27_0+0000-e238ea04b71
+<configuration>
+    <net-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm.net.xml.gz"/>
+    <ptlines-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm_ptlines.xml"/>
+    <ptstops-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm_stops.add.xml"/>
+    <output-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\osm_pt.rou.xml"/>
+    <stopinfos-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\stopinfos.xml"/>
+    <routes-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\vehroutes.xml"/>
+    <trips-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\2026-07-02-16-16-50\trips.trips.xml"/>
+    <min-stops value="0"/>
+    <extend-to-fringe value="True"/>
+    <random-begin value="True"/>
+    <seed value="42"/>
+    <ignore-errors value="True"/>
+    <types value="bus,tram,subway,light_rail,train,trolleybus,monorail,minibus,share_taxi,ferry,aerialway"/>
+    <vtype-prefix value="pt_"/>
+    <verbose value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus"/>
+    <vType id="pt_tram" vClass="tram"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="subway"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail_urban"/>
+    <vType id="pt_trolleybus" vClass="bus"/>
+    <vType id="pt_minibus" vClass="bus"/>
+    <vType id="pt_share_taxi" vClass="taxi"/>
+    <vType id="pt_aerialway" vClass="cable_car" length="2.5" width="2" personCapacity="4"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <route id="pt_bus_4:0" edges="393063209#0 393063209#1 393063209#2 393063209#3 393063209#4 393063209#5 490366732#0 490366732#1 490366732#2 395950811#0 395950811#1 395950811#2 52141980 430812002#2 430812002#3 -431212724#2 -431212724#1 -431212724#0 -330255479#7 -330255479#5 -330255479#4 -330255479#3 -330255479#2 -330255479#1 -330255479#0" >
+        <stop busStop="4754647819" duration="20" until="87.0"/> <!-- None -->
+        <stop busStop="4754647820" duration="20" until="149.0"/> <!-- None -->
+        <stop busStop="4363241806" duration="20" until="209.0"/> <!-- None -->
+        <stop busStop="-4363241830" duration="20" until="324.0"/> <!-- None -->
+    </route>
+    <flow id="pt_bus_4:0" type="pt_bus" route="pt_bus_4:0" begin="383.0" end="3983.0" period="600" line="4:0" >
+        <param key="name" value="4 Leclerc - Liberté"/>
+        <param key="completeness" value="0.12"/>
+    </flow>
+</routes>

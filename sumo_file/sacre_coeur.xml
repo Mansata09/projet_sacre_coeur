@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-06-24T11:12:51.305849+00:00 by Eclipse SUMO GUI 1.27.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\sumo_file\sacre_coeur.net.xml"/>
+        <route-files value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\sumo_file\routes.rou.xml"/>
+        <additional-files value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\sumo_file\traffic_lights.xml"/>
+    </input>
+
+    <output>
+        <netstate-dump value="C:\Users\Fatou Ndiaye\OneDrive\Desktop\projet_sacre_coeur\sumo_file\sacre_coeur.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+        <step-length value="1.0"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+</sumoConfiguration>
+-->
+
+<netstate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netstate_file.xsd">
+</netstate>

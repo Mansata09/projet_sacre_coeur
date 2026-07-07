@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges>
+
+    <edge id="N0_N2" from="N0" to="N2" numLanes="2" speed="13.89" allow="passenger bus bicycle emergency" spreadType="right"/>
+    <edge id="N2_N0" from="N2" to="N0" numLanes="2" speed="13.89" allow="passenger bus bicycle emergency" spreadType="right"/>
+
+    <edge id="N0_N1" from="N0" to="N1" numLanes="2" speed="13.89" allow="passenger bus bicycle emergency" spreadType="right"/>
+    <edge id="N1_N0" from="N1" to="N0" numLanes="2" speed="13.89" allow="passenger bus bicycle emergency" spreadType="right"/>
+
+    <edge id="N0_N3" from="N0" to="N3" numLanes="2" speed="13.89" allow="passenger bus bicycle emergency" shape="8,0 8,300"/>
+    <edge id="N3_N0" from="N3" to="N0" numLanes="2" speed="13.89" allow="passenger bus bicycle emergency" shape="-8,300 -8,0"/>
+
+    <edge id="N0_N4" from="N0" to="N4" numLanes="2" speed="13.89" allow="passenger bus bicycle emergency" shape="-8,0 -8,-300"/>
+    <edge id="N4_N0" from="N4" to="N0" numLanes="2" speed="13.89" allow="passenger bus bicycle emergency" shape="8,-300 8,0"/>
+
+    <edge id="N0_N3_BRT" from="N0" to="N3" numLanes="1" speed="12.5" allow="tram" shape="4,0 4,300"/>
+    <edge id="N3_N0_BRT" from="N3" to="N0" numLanes="1" speed="12.5" allow="tram" shape="-4,300 -4,0"/>
+
+    <edge id="N0_N4_BRT" from="N0" to="N4" numLanes="1" speed="12.5" allow="tram" shape="-4,0 -4,-300"/>
+    <edge id="N4_N0_BRT" from="N4" to="N0" numLanes="1" speed="12.5" allow="tram" shape="4,-300 4,0"/>
+
+</edges>

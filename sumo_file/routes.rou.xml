@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+
+    <!-- TYPES DE VEHICULES -->
+    <vType id="passenger" vClass="passenger"
+            accel="2.6" decel="4.5" sigma="0.2"
+            length="4.5" maxSpeed="13.89" color="1,1,0"
+            laneChangeModel="LC2013"
+            lcStrategic="1.0" lcCooperative="1.0"
+            lcSpeedGain="5.0" lcKeepRight="0.0"
+            lcAssertive="1.0" lcOvertakeRight="1.0"/>
+
+    <vType id="tata" vClass="bus"
+            accel="1.5" decel="3.0" sigma="0.5"
+            length="8.0" maxSpeed="11.11" color="1,0.5,0"
+            laneChangeModel="LC2013"
+            lcStrategic="1.5" lcSpeedGain="2.0"/>
+
+    <vType id="bus" vClass="bus"
+            accel="1.5" decel="3.0" sigma="0.5"
+            length="12.0" maxSpeed="11.11" color="0,1,0"
+            laneChangeModel="LC2013" lcStrategic="1.5"/>
+
+    <vType id="brt" vClass="tram"
+            accel="1.2" decel="2.5" sigma="0.1"
+            length="18.0" maxSpeed="12.50" color="0,0,1"
+            guiShape="bus"/>
+
+    <vType id="emergency" vClass="emergency"
+            accel="3.0" decel="5.0" sigma="0.1"
+            length="6.0" maxSpeed="16.67" color="1,0,0"
+            guiShape="emergency"/>
+
+    <!-- ROUTES -->
+    <route id="r_N1_N2" edges="N1_N0 N0_N2"/>
+    <route id="r_N1_N3" edges="N1_N0 N0_N3"/>
+    <route id="r_N1_N4" edges="N1_N0 N0_N4"/>
+
+    <route id="r_N2_N1" edges="N2_N0 N0_N1"/>
+    <route id="r_N2_N3" edges="N2_N0 N0_N3"/>
+    <route id="r_N2_N4" edges="N2_N0 N0_N4"/>
+
+    <route id="r_N3_N1" edges="N3_N0 N0_N1"/>
+    <route id="r_N3_N2" edges="N3_N0 N0_N2"/>
+    <route id="r_N3_N4" edges="N3_N0 N0_N4"/>
+
+    <route id="r_N4_N1" edges="N4_N0 N0_N1"/>
+    <route id="r_N4_N2" edges="N4_N0 N0_N2"/>
+    <route id="r_N4_N3" edges="N4_N0 N0_N3"/>
+
+    <route id="BRT_N3_to_N4" edges="N3_N0_BRT N0_N4_BRT"/>
+    <route id="BRT_N4_to_N3" edges="N4_N0_BRT N0_N3_BRT"/>
+
+    <!-- ========================= -->
+    <!-- begin=0 : BRT + TATA + BUS + MATIN -->
+    <!-- ========================= -->
+
+    <!-- BRT toute la journée -->
+    <flow id="BRT_descente" type="brt" begin="0" end="3600"
+            period="90" route="BRT_N3_to_N4" departLane="free"/>
+
+    <!-- Tata toute la journée -->
+    <!-- <flow id="Tata_1" type="tata" begin="0" end="3600" period="20" route="r_N1_N3" departLane="free"/>
+    <flow id="Tata_2" type="tata" begin="0" end="3600" period="50" route="r_N3_N1" departLane="free"/>
+    <flow id="Tata_3" type="tata" begin="0" end="3600" period="30" route="r_N2_N4" departLane="free"/>
+    <flow id="Tata_4" type="tata" begin="0" end="3600" period="10" route="r_N4_N2" departLane="free"/> -->
+
+    <!-- Bus toute la journée -->
+    <!-- <flow id="Bus_1" type="bus" begin="0" end="3600" period="30" route="r_N1_N4" departLane="free"/>
+    <flow id="Bus_2" type="bus" begin="0" end="3600" period="40" route="r_N4_N1" departLane="free"/>
+    <flow id="Bus_3" type="bus" begin="0" end="3600" period="15" route="r_N2_N3" departLane="free"/>
+    <flow id="Bus_4" type="bus" begin="0" end="3600" period="50" route="r_N3_N2" departLane="free"/> -->
+
+    <!-- Ambulances toute la journée -->
+    <flow id="Ambulance_1" type="emergency" begin="0" end="3600" probability="0.02" route="r_N1_N4" departLane="free"/>
+    <flow id="Ambulance_2" type="emergency" begin="0" end="3600" probability="0.002" route="r_N4_N1" departLane="free"/>
+    <flow id="Ambulance_3" type="emergency" begin="0" end="3600" probability="0.002" route="r_N2_N3" departLane="free"/>
+    <flow id="Ambulance_4" type="emergency" begin="0" end="3600" probability="0.002" route="r_N3_N2" departLane="free"/>
+
+    <!-- MATIN : Liberté 6 → Petersen/Sacré-Cœur -->
+    <flow id="Matin_L6_N3_N4"  type="passenger" begin="0" end="1000" probability="0.20" route="r_N3_N4" departLane="free"/>
+    <flow id="Matin_L6_N3_N2"  type="passenger" begin="0" end="1000" probability="0.40" route="r_N3_N2" departLane="free"/>
+    <flow id="Matin_L6_N3_N1"  type="passenger" begin="0" end="1000" probability="0.40" route="r_N3_N1" departLane="free"/>
+    <flow id="Matin_Oua_N2_N4" type="passenger" begin="0" end="1000" probability="0.50" route="r_N2_N4" departLane="free"/>
+    <flow id="Matin_Oua_N2_N3" type="passenger" begin="0" end="1000" probability="0.40" route="r_N2_N3" departLane="free"/>
+    <flow id="Matin_Pet_N4_N3" type="passenger" begin="0" end="1000" probability="0.05" route="r_N4_N3" departLane="free"/>
+    <flow id="Matin_SC_N1_N2"  type="passenger" begin="0" end="1000" probability="0.04" route="r_N1_N2" departLane="free"/>
+    
+    <flow id="Tata_1" type="tata" begin="0" end="1000" probability="0.010" route="r_N3_N4" departLane="free"/>
+    <flow id="Tata_2" type="tata" begin="0" end="1000" probability="0.030" route="r_N3_N1" departLane="free"/>
+    <flow id="Tata_3" type="tata" begin="0" end="1000" probability="0.20" route="r_N2_N3" departLane="free"/>
+    <flow id="Tata_4" type="tata" begin="0" end="1000" probability="0.050" route="r_N4_N3" departLane="free"/>
+    <flow id="Tata_5" type="tata" begin="0" end="1000" probability="0.050" route="r_N1_N4" departLane="free"/>
+
+
+    <flow id="Bus_1" type="bus" begin="0" end="1000" probability="0.20" route="r_N3_N4" departLane="free"/>
+    <flow id="Bus_2" type="bus" begin="0" end="1000" probability="0.10" route="r_N3_N1" departLane="free"/>
+    <flow id="Bus_3" type="bus" begin="0" end="1000" probability="0.30" route="r_N2_N3" departLane="free"/>
+    <flow id="Bus_4" type="bus" begin="0" end="1000" probability="0.050" route="r_N4_N3" departLane="free"/>
+    <flow id="Bus_5" type="bus" begin="0" end="1000" probability="0.050" route="r_N1_N4" departLane="free"/>
+    <flow id="Bus_6" type="bus" begin="0" end="1000" probability="0.050" route="r_N1_N3" departLane="free"/>
+
+
+
+    <!-- ========================= -->
+    <!-- begin=45 : BRT remontée   -->
+    <!-- ========================= -->
+
+    <flow id="BRT_remontee" type="brt" begin="45" end="3600"
+            period="90" route="BRT_N4_to_N3" departLane="free"/>
+
+    <!-- ========================= -->
+    <!-- begin=1000 : HEURE CREUSE -->
+    <!-- Trafic normal équilibré   -->
+    <!-- ========================= -->
+
+    <flow id="Creuse_N3_N4" type="passenger" begin="1000" end="2000"  probability="0.0050" route="r_N3_N4" departLane="free"/>
+    <flow id="Creuse_N3_N2" type="passenger" begin="1000" end="2000"  probability="0.0050" route="r_N3_N2" departLane="free"/>
+    <flow id="Creuse_N4_N3" type="passenger" begin="1000" end="2000"  probability="0.40" route="r_N4_N3" departLane="free"/>
+    <flow id="Creuse_N2_N4" type="passenger" begin="1000" end="2000"  probability="0.0050" route="r_N2_N4" departLane="free"/>
+    <flow id="Creuse_N1_N2" type="passenger" begin="1000" end="2000"  probability="0.40" route="r_N1_N2" departLane="free"/>
+    <flow id="Creuse_N2_N1" type="passenger" begin="1000" end="2000"  probability="0.0050" route="r_N2_N1" departLane="free"/>
+    <flow id="Creuse_N1_N4" type="passenger" begin="1000" end="2000"  probability="0.60" route="r_N1_N4" departLane="free"/>
+    <flow id="Creuse_N4_N1" type="passenger" begin="1000" end="2000"  probability="0.50" route="r_N4_N1" departLane="free"/>
+
+    <flow id="Tata_11" type="tata" begin="1000" end="2000" probability="0.0050" route="r_N3_N4" departLane="free"/>
+    <flow id="Tata_22" type="tata" begin="1000" end="2000" probability="0.0050" route="r_N3_N2" departLane="free"/>
+    <flow id="Tata_33" type="tata" begin="1000" end="2000" probability="0.0050" route="r_N2_N4" departLane="free"/>
+    <flow id="Tata_44" type="tata" begin="1000" end="2000" probability="0.50" route="r_N4_N1" departLane="free"/>
+
+    
+    <flow id="Bus_11" type="bus" begin="1000" end="2000" probability="0.0050" route="r_N3_N4" departLane="free"/>
+    <flow id="Bus_22" type="bus" begin="1000" end="2000" probability="0.0050" route="r_N3_N2" departLane="free"/>
+    <flow id="Bus_33" type="bus" begin="1000" end="2000" probability="0.0050" route="r_N2_N4" departLane="free"/>
+    <flow id="Bus_44" type="bus" begin="1000" end="2000" probability="0.50" route="r_N4_N1" departLane="free"/>
+
+
+    <!-- ========================= -->
+    <!-- begin=2000 : SOIR POINTE  -->
+    <!-- Petersen/SC → Liberté6    -->
+    <!-- ========================= -->
+
+    <flow id="Soir_Pet_N4_N3"  type="passenger" begin="2000" end="3000" probability="0.04" route="r_N4_N3" departLane="free"/>
+    <flow id="Soir_Pet_N4_N2"  type="passenger" begin="2000" end="3000" probability="0.15" route="r_N4_N2" departLane="free"/>
+    <flow id="Soir_Pet_N4_N1"  type="passenger" begin="2000" end="3000" probability="0.10" route="r_N4_N1" departLane="free"/>
+    <flow id="Soir_SC_N1_N3"   type="passenger" begin="2000" end="3000" probability="0.35" route="r_N1_N3" departLane="free"/>
+    <flow id="Soir_SC_N1_N2"   type="passenger" begin="2000" end="3000" probability="0.15" route="r_N1_N2" departLane="free"/>
+    <flow id="Soir_Oua_N2_N3"  type="passenger" begin="2000" end="3000" probability="0.001" route="r_N2_N3" departLane="free"/>
+    <flow id="Soir_L6_N3_N4"   type="passenger" begin="2000" end="3000" probability="0.003" route="r_N3_N4" departLane="free"/>
+
+    <!-- ========================= -->
+    <!-- begin=3000 : FIN SOIREE   -->
+    <!-- Trafic faible             -->
+    <!-- ========================= -->
+
+    <flow id="Fin_N4_N3" type="passenger" begin="3000" end="3600" probability="0.1" route="r_N4_N3" departLane="free"/>
+    <flow id="Fin_N3_N4" type="passenger" begin="3000" end="3600" probability="0.02" route="r_N3_N4" departLane="free"/>
+    <flow id="Fin_N1_N3" type="passenger" begin="3000" end="3600" probability="0.02" route="r_N1_N3" departLane="free"/>
+    <flow id="Fin_N2_N1" type="passenger" begin="3000" end="3600" probability="0.005" route="r_N2_N1" departLane="free"/>
+    <flow id="Fin_N1_N2" type="passenger" begin="3000" end="3600" probability="0.01" route="r_N1_N2" departLane="free"/>
+
+</routes>
